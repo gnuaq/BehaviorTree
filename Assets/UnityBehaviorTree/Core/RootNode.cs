@@ -1,7 +1,21 @@
-﻿namespace UnityBehaviorTree.Core
+﻿using GraphProcessor;
+
+namespace UnityBehaviorTree.Core
 {
-    public class RootNode : Node
+    [System.Serializable, NodeMenuItem("BehaviorTree/Root")]
+    public class RootNode : BTNode
     {
+        private BTNode _child;
+
+        public BTNode Child
+        {
+            set => _child = value;
+            get => _child;
+        }
+        
+        [Output(name = "Out", allowMultiple = false)]
+        public int Output;
+        
         protected override void OnStart()
         {
         }
@@ -10,9 +24,15 @@
         {
         }
 
-        protected override Status OnUpdate()
+        protected override EStatus OnUpdate()
         {
-            return Status.Success;
+            _child.OnProcess();
+            return _status = _child.Status;
+        }
+        
+        public override BTNode Clone()
+        {
+            return (BTNode)this.MemberwiseClone();
         }
     }
 }

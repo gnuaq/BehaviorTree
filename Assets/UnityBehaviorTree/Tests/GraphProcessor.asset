@@ -1,0 +1,202 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31390c44c9f3a3d40b424bf6821999a2, type: 3}
+  m_Name: GraphProcessor
+  m_EditorClassIdentifier: 
+  serializedNodes: []
+  nodes:
+  - rid: 7558387783647363313
+  - rid: 7558387790392328192
+  - rid: 7558387790392328193
+  - rid: 7558387790392328194
+  - rid: 7558387790392328195
+  - rid: 7558387790392328196
+  - rid: 7558387790392328197
+  edges:
+  - GUID: 576e7732-51f0-43b1-b0ad-bb2626342a76
+    owner: {fileID: 11400000}
+    inputNodeGUID: d538dbfa-1894-4743-9ed7-d699dcb66714
+    outputNodeGUID: 40d6a2f3-e6e5-4960-bf2c-47b0e6f153df
+    inputFieldName: Input
+    outputFieldName: Output
+    inputPortIdentifier: 
+    outputPortIdentifier: 
+  - GUID: d0422144-93ea-4be9-94ef-34a4bb0d0151
+    owner: {fileID: 11400000}
+    inputNodeGUID: 4b2ce0d6-44e4-4e1e-80fa-9daadb2f81a2
+    outputNodeGUID: d538dbfa-1894-4743-9ed7-d699dcb66714
+    inputFieldName: Input
+    outputFieldName: Output
+    inputPortIdentifier: 
+    outputPortIdentifier: 
+  - GUID: c81b7353-22f3-44e2-bb04-2fbb589fed36
+    owner: {fileID: 11400000}
+    inputNodeGUID: 31bc53da-e8ec-4c1e-8e60-fdb493dc87e0
+    outputNodeGUID: d538dbfa-1894-4743-9ed7-d699dcb66714
+    inputFieldName: Input
+    outputFieldName: Output
+    inputPortIdentifier: 
+    outputPortIdentifier: 
+  - GUID: ce3b5103-cfee-4716-8370-df869fa45610
+    owner: {fileID: 11400000}
+    inputNodeGUID: cfdcc0f1-e3d0-46e0-af8a-9cddb93937df
+    outputNodeGUID: d538dbfa-1894-4743-9ed7-d699dcb66714
+    inputFieldName: Input
+    outputFieldName: Output
+    inputPortIdentifier: 
+    outputPortIdentifier: 
+  - GUID: 8499883c-c4f0-40c2-9412-2f9ae8d979f9
+    owner: {fileID: 11400000}
+    inputNodeGUID: 2a72938b-0748-4ed9-8ae9-3436d5aa1d90
+    outputNodeGUID: d538dbfa-1894-4743-9ed7-d699dcb66714
+    inputFieldName: Input
+    outputFieldName: Output
+    inputPortIdentifier: 
+    outputPortIdentifier: 
+  - GUID: 33c5b677-3fd4-48c4-8ab4-33e2cc0dd351
+    owner: {fileID: 11400000}
+    inputNodeGUID: c5cdbb33-ba55-4838-b036-20da1209527a
+    outputNodeGUID: d538dbfa-1894-4743-9ed7-d699dcb66714
+    inputFieldName: Input
+    outputFieldName: Output
+    inputPortIdentifier: 
+    outputPortIdentifier: 
+  groups: []
+  stackNodes: []
+  pinnedElements: []
+  exposedParameters: []
+  serializedParameterList: []
+  stickyNotes: []
+  nodeInspectorReference: {fileID: 0}
+  position: {x: 376, y: -50, z: 0}
+  scale: {x: 0.7561437, y: 0.7561437, z: 1}
+  references:
+    version: 2
+    RefIds:
+    - rid: 7558387783647363313
+      type: {class: Sequence, ns: UnityBehaviorTree.Core.Composite, asm: Assembly-CSharp}
+      data:
+        nodeCustomName: 
+        GUID: d538dbfa-1894-4743-9ed7-d699dcb66714
+        computeOrder: 1
+        position:
+          serializedVersion: 2
+          x: -66.00003
+          y: 148.7
+          width: 102
+          height: 75
+        expanded: 0
+        debug: 0
+        nodeLock: 0
+        Input: 0
+        Output: 0
+    - rid: 7558387790392328192
+      type: {class: Log, ns: UnityBehaviorTree.Core.Action, asm: Assembly-CSharp}
+      data:
+        nodeCustomName: 
+        GUID: 4b2ce0d6-44e4-4e1e-80fa-9daadb2f81a2
+        computeOrder: 2
+        position:
+          serializedVersion: 2
+          x: -271.35495
+          y: 372.00003
+          width: 164
+          height: 94
+        expanded: 0
+        debug: 0
+        nodeLock: 0
+        Input: 0
+        _msg: abc
+    - rid: 7558387790392328193
+      type: {class: Wait, ns: UnityBehaviorTree.Core.Action, asm: Assembly-CSharp}
+      data:
+        nodeCustomName: 
+        GUID: 31bc53da-e8ec-4c1e-8e60-fdb493dc87e0
+        computeOrder: 3
+        position:
+          serializedVersion: 2
+          x: 103.87249
+          y: 372.00003
+          width: 151
+          height: 94
+        expanded: 0
+        debug: 0
+        nodeLock: 0
+        Input: 0
+        _duration: 3
+    - rid: 7558387790392328194
+      type: {class: Log, ns: UnityBehaviorTree.Core.Action, asm: Assembly-CSharp}
+      data:
+        nodeCustomName: 
+        GUID: cfdcc0f1-e3d0-46e0-af8a-9cddb93937df
+        computeOrder: 4
+        position:
+          serializedVersion: 2
+          x: -85.00015
+          y: 372.00003
+          width: 169
+          height: 94
+        expanded: 0
+        debug: 0
+        nodeLock: 0
+        Input: 0
+        _msg: abc1
+    - rid: 7558387790392328195
+      type: {class: Log, ns: UnityBehaviorTree.Core.Action, asm: Assembly-CSharp}
+      data:
+        nodeCustomName: 
+        GUID: 2a72938b-0748-4ed9-8ae9-3436d5aa1d90
+        computeOrder: 5
+        position:
+          serializedVersion: 2
+          x: 290.23248
+          y: 372.00003
+          width: 170
+          height: 94
+        expanded: 0
+        debug: 0
+        nodeLock: 0
+        Input: 0
+        _msg: abc2
+    - rid: 7558387790392328196
+      type: {class: Log, ns: UnityBehaviorTree.Core.Action, asm: Assembly-CSharp}
+      data:
+        nodeCustomName: 
+        GUID: c5cdbb33-ba55-4838-b036-20da1209527a
+        computeOrder: 6
+        position:
+          serializedVersion: 2
+          x: -479.59576
+          y: 372.00003
+          width: 171
+          height: 94
+        expanded: 0
+        debug: 0
+        nodeLock: 0
+        Input: 0
+        _msg: abc3
+    - rid: 7558387790392328197
+      type: {class: RootNode, ns: UnityBehaviorTree.Core, asm: Assembly-CSharp}
+      data:
+        nodeCustomName: 
+        GUID: 40d6a2f3-e6e5-4960-bf2c-47b0e6f153df
+        computeOrder: 0
+        position:
+          serializedVersion: 2
+          x: -15
+          y: -12.359985
+          width: 99
+          height: 75
+        expanded: 0
+        debug: 0
+        nodeLock: 0
+        Output: 0

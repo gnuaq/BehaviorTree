@@ -1,8 +1,10 @@
-﻿using UnityEditor;
+﻿using GraphProcessor;
+using UnityEditor;
 using UnityEngine;
 
 namespace UnityBehaviorTree.Core.Action
 {
+    [System.Serializable, NodeMenuItem("BehaviorTree/Action/Log")]
     public class Log : ActionNode
     {
         [SerializeField]
@@ -16,10 +18,10 @@ namespace UnityBehaviorTree.Core.Action
         {
         }
 
-        protected override Status OnUpdate()
+        protected override EStatus OnUpdate()
         {
             Debug.Log($"Log: {_msg}");
-            _status = Status.Success;
+            _status = EStatus.Success;
             return _status;
         }
     }

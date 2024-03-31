@@ -1,20 +1,37 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Reflection;
+using GraphProcessor;
+using Unity.VisualScripting;
 using UnityEngine;
 
 namespace UnityBehaviorTree.Core
 {
-    public abstract class CompositeNode : Node
+    public abstract class CompositeNode : BTNode
     {
-        protected List<Node> _children;
+        [Input(name = "In")]
+        public int Input;
+
+        [Output(name = "Out")]
+        public int Output;
+        
+        protected List<BTNode> _children = new List<BTNode>();
+        
+        public List<BTNode> Children => _children;
 
         public CompositeNode() : base()
         {
-            _children = new List<Node>();
+            _children = new List<BTNode>();
         }
         
-        public CompositeNode(List<Node> children) : base()
+        public CompositeNode(List<BTNode> children) : base()
         {
             _children = children;
+        }
+
+        public override BTNode Clone()
+        {
+            return (BTNode)this.MemberwiseClone();
         }
     }
 }

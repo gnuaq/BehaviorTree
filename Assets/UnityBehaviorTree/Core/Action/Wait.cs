@@ -1,9 +1,11 @@
 ﻿using System.Threading;
+using GraphProcessor;
 using UnityEditor;
 using UnityEngine;
 
 namespace UnityBehaviorTree.Core.Action
 {
+    [System.Serializable, NodeMenuItem("BehaviorTree/Action/Wait")]
     public class Wait : ActionNode
     {
         [SerializeField]
@@ -20,16 +22,16 @@ namespace UnityBehaviorTree.Core.Action
         {
         }
 
-        protected override Status OnUpdate()
+        protected override EStatus OnUpdate()
         {
             if (_time < _duration)
             {
                 _time += Time.deltaTime;
-                _status = Status.Running;
+                _status = EStatus.Running;
             }
             else
             {
-                _status =  Status.Success;
+                _status =  EStatus.Success;
             }
 
             return _status;

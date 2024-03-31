@@ -1,43 +1,54 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
+using GraphProcessor;
 using UnityEngine.SubsystemsImplementation;
 
 namespace UnityBehaviorTree.Core.Composite
 {
+    [System.Serializable, NodeMenuItem("BehaviorTree/Composite/Sequence")]
     public class Sequence : CompositeNode
     {
+        protected int _current = 0;
+        
         public Sequence() : base() { }
         
-        public Sequence(List<Node> children) : base()
+        public Sequence(List<BTNode> children) : base()
         {
             _children = children;
         }
+        
+        public override string name => "Sequence";
 
         protected override void OnStart()
         {
+            _children = _children.OrderBy(o => o.position.x).ToList();
+            _current = 0;
         }
 
         protected override void OnStop()
         {
         }
 
-        protected override Status OnUpdate()
+        protected override EStatus OnUpdate()
         {
-            foreach (var child in _children)
+            for (int i = _current; i < _children.Count; ++i)
             {
-                child.Tick();
-                switch (child._status)
+                _current = i;
+                _children[i].OnProcess();
+                switch (_children[i].Status)
                 {
-                    case Status.Running:
-                        return _status = Status.Running;
-                    case Status.Success:
+                    case EStatus.Running:
+                        return _status = EStatus.Running;
+                    case EStatus.Success:
                         continue;
-                    case Status.Failed:
-                        return _status = Status.Failed;
+                    case EStatus.Failed:
+                        return _status = EStatus.Failed;
                     default:
-                        return _status = Status.Failed;
+                        return _status = EStatus.Failed;
                 }
             }
-            return _status = Status.Success;
+
+            return _status = EStatus.Success;
         }
     }
 }
