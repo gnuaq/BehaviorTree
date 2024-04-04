@@ -1,18 +1,17 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using GraphProcessor;
-using UnityEngine.SubsystemsImplementation;
 
 namespace UnityBehaviorTree.Core.Composite
 {
-    [System.Serializable, NodeMenuItem("BehaviorTree/Composite/Sequence")]
-    public class Sequence : CompositeNode
+    [System.Serializable, NodeMenuItem("BehaviorTree/Composite/Priority")]
+    public class Priority : CompositeNode
     {
         protected int _current = 0;
         
-        public Sequence() : base() { }
+        public Priority() : base() { }
         
-        public Sequence(List<BTNode> children) : base()
+        public Priority(List<BTNode> children) : base()
         {
             _children = children;
         }
@@ -40,15 +39,15 @@ namespace UnityBehaviorTree.Core.Composite
                     case EStatus.Running:
                         return _status = EStatus.Running;
                     case EStatus.Success:
-                        continue;
+                        return _status = EStatus.Success;
                     case EStatus.Failed:
-                        return _status = EStatus.Failed;
+                        continue;
                     default:
                         return _status = EStatus.Failed;
                 }
             }
 
-            return _status = EStatus.Success;
+            return _status = EStatus.Failed;
         }
     }
 }
