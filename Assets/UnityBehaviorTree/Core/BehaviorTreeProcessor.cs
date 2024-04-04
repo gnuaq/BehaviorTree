@@ -69,7 +69,7 @@ namespace UnityBehaviorTree.Core
 
         public override void Run()
         {
-            if (_rootNode.Status != BTNode.EStatus.Success)
+            if (_rootNode.Status == BTNode.EStatus.Running || _rootNode.Status == BTNode.EStatus.None)
             {
                 _rootNode.OnProcess();
             }
