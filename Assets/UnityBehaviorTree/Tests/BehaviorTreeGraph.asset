@@ -25,6 +25,8 @@ MonoBehaviour:
   - rid: 7558387796063027212
   - rid: 7558387796063027214
   - rid: 7558387796063027216
+  - rid: 7265160626506563584
+  - rid: 7265160626506563585
   edges:
   - GUID: a7170534-b30e-4292-a46b-3507b1a33e06
     owner: {fileID: 11400000}
@@ -46,14 +48,6 @@ MonoBehaviour:
     owner: {fileID: 11400000}
     inputNodeGUID: 1b911786-7f91-4132-a75b-e306a1188326
     outputNodeGUID: 8e3592d5-f7ae-4f70-8dc4-43ec526c03c8
-    inputFieldName: Input
-    outputFieldName: Output
-    inputPortIdentifier: 
-    outputPortIdentifier: 
-  - GUID: afdea62d-21ac-4488-9835-de70f06d260d
-    owner: {fileID: 11400000}
-    inputNodeGUID: e95c0270-3644-4f37-8de6-027b97091464
-    outputNodeGUID: e2df8b1f-70f2-4cf8-af4f-f773e37db0db
     inputFieldName: Input
     outputFieldName: Output
     inputPortIdentifier: 
@@ -106,6 +100,30 @@ MonoBehaviour:
     outputFieldName: Output
     inputPortIdentifier: 
     outputPortIdentifier: 
+  - GUID: fd4070c6-d2da-421b-a557-3374a33c014e
+    owner: {fileID: 11400000}
+    inputNodeGUID: e95c0270-3644-4f37-8de6-027b97091464
+    outputNodeGUID: b7c1b3c2-5c62-4983-8812-a7237a7ee535
+    inputFieldName: Input
+    outputFieldName: Output
+    inputPortIdentifier: 
+    outputPortIdentifier: 
+  - GUID: a69ef0db-17c4-488d-82b1-0aaef0269932
+    owner: {fileID: 11400000}
+    inputNodeGUID: 6dfc32ca-6da4-468e-9b25-26c2f57319f6
+    outputNodeGUID: e2df8b1f-70f2-4cf8-af4f-f773e37db0db
+    inputFieldName: Input
+    outputFieldName: Output
+    inputPortIdentifier: 
+    outputPortIdentifier: 
+  - GUID: 15a2ed22-398d-4485-b6e8-ec5658e01814
+    owner: {fileID: 11400000}
+    inputNodeGUID: b7c1b3c2-5c62-4983-8812-a7237a7ee535
+    outputNodeGUID: 6dfc32ca-6da4-468e-9b25-26c2f57319f6
+    inputFieldName: Input
+    outputFieldName: Output
+    inputPortIdentifier: 
+    outputPortIdentifier: 
   groups: []
   stackNodes: []
   pinnedElements: []
@@ -113,11 +131,45 @@ MonoBehaviour:
   serializedParameterList: []
   stickyNotes: []
   nodeInspectorReference: {fileID: 0}
-  position: {x: -96, y: -110, z: 0}
-  scale: {x: 0.8695652, y: 0.8695652, z: 1}
+  position: {x: 535, y: -338, z: 0}
+  scale: {x: 1.15, y: 1.15, z: 1}
   references:
     version: 2
     RefIds:
+    - rid: 7265160626506563584
+      type: {class: ForceSuccess, ns: UnityBehaviorTree.Core.Decorator, asm: Assembly-CSharp}
+      data:
+        nodeCustomName: 
+        GUID: b7c1b3c2-5c62-4983-8812-a7237a7ee535
+        computeOrder: 4
+        position:
+          serializedVersion: 2
+          x: -188.00005
+          y: 685
+          width: 122
+          height: 75
+        expanded: 1
+        debug: 0
+        nodeLock: 0
+        Input: 0
+        Output: 0
+    - rid: 7265160626506563585
+      type: {class: Inverter, ns: UnityBehaviorTree.Core.Decorator, asm: Assembly-CSharp}
+      data:
+        nodeCustomName: 
+        GUID: 6dfc32ca-6da4-468e-9b25-26c2f57319f6
+        computeOrder: 3
+        position:
+          serializedVersion: 2
+          x: -183.99998
+          y: 553.5
+          width: 102
+          height: 75
+        expanded: 0
+        debug: 0
+        nodeLock: 0
+        Input: 0
+        Output: 0
     - rid: 7558387796063027200
       type: {class: RootNode, ns: UnityBehaviorTree.Core, asm: Assembly-CSharp}
       data:
@@ -126,8 +178,8 @@ MonoBehaviour:
         computeOrder: 0
         position:
           serializedVersion: 2
-          x: 330
-          y: 135
+          x: 309.00003
+          y: 123.9675
           width: 99
           height: 75
         expanded: 0
@@ -156,11 +208,11 @@ MonoBehaviour:
       data:
         nodeCustomName: 
         GUID: e95c0270-3644-4f37-8de6-027b97091464
-        computeOrder: 3
+        computeOrder: 5
         position:
           serializedVersion: 2
-          x: -242.65012
-          y: 566.00006
+          x: -236.39131
+          y: 809.0957
           width: 170
           height: 94
         expanded: 1
@@ -173,10 +225,10 @@ MonoBehaviour:
       data:
         nodeCustomName: 
         GUID: 6eadc36f-bf86-49fd-94f7-7b59085d6b99
-        computeOrder: 4
+        computeOrder: 6
         position:
           serializedVersion: 2
-          x: -459.3875
+          x: -452.0001
           y: 566
           width: 151
           height: 94
@@ -190,7 +242,7 @@ MonoBehaviour:
       data:
         nodeCustomName: 
         GUID: bb201e61-bcc6-4325-9c74-f71ad494c730
-        computeOrder: 5
+        computeOrder: 7
         position:
           serializedVersion: 2
           x: -21.972443
@@ -207,7 +259,7 @@ MonoBehaviour:
       data:
         nodeCustomName: 
         GUID: a5e7e312-ab6c-451e-9d6a-5fbe49479470
-        computeOrder: 6
+        computeOrder: 8
         position:
           serializedVersion: 2
           x: 166.02753
@@ -227,8 +279,8 @@ MonoBehaviour:
         computeOrder: 2
         position:
           serializedVersion: 2
-          x: 45.000034
-          y: 345.03
+          x: 45.000008
+          y: 355.43478
           width: 102
           height: 75
         expanded: 0
@@ -241,7 +293,7 @@ MonoBehaviour:
       data:
         nodeCustomName: 
         GUID: 1b911786-7f91-4132-a75b-e306a1188326
-        computeOrder: 7
+        computeOrder: 9
         position:
           serializedVersion: 2
           x: 625.7101
@@ -258,7 +310,7 @@ MonoBehaviour:
       data:
         nodeCustomName: 
         GUID: fcb11b57-bc84-486d-985c-68469709f189
-        computeOrder: 8
+        computeOrder: 10
         position:
           serializedVersion: 2
           x: 695.9325
@@ -275,7 +327,7 @@ MonoBehaviour:
       data:
         nodeCustomName: 
         GUID: 577d8fb9-850b-4818-8f1a-bd2c58c00e5d
-        computeOrder: 9
+        computeOrder: 11
         position:
           serializedVersion: 2
           x: 937
@@ -292,11 +344,11 @@ MonoBehaviour:
       data:
         nodeCustomName: 
         GUID: 59c48fe4-2753-4e15-9278-b0e5436c9966
-        computeOrder: 10
+        computeOrder: 12
         position:
           serializedVersion: 2
-          x: 866.2501
-          y: 369.00006
+          x: 326.50006
+          y: 345
           width: 163
           height: 94
         expanded: 0
