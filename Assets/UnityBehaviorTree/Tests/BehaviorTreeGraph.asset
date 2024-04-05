@@ -27,15 +27,8 @@ MonoBehaviour:
   - rid: 7558387796063027216
   - rid: 7265160626506563584
   - rid: 7265160626506563585
+  - rid: 7265160642589622272
   edges:
-  - GUID: a7170534-b30e-4292-a46b-3507b1a33e06
-    owner: {fileID: 11400000}
-    inputNodeGUID: 8e3592d5-f7ae-4f70-8dc4-43ec526c03c8
-    outputNodeGUID: 1a56b1f6-4431-4072-98d8-e0e5ad14818d
-    inputFieldName: Input
-    outputFieldName: Output
-    inputPortIdentifier: 
-    outputPortIdentifier: 
   - GUID: a1281593-efcc-460e-8ed7-c5ee3ca83106
     owner: {fileID: 11400000}
     inputNodeGUID: e2df8b1f-70f2-4cf8-af4f-f773e37db0db
@@ -100,25 +93,41 @@ MonoBehaviour:
     outputFieldName: Output
     inputPortIdentifier: 
     outputPortIdentifier: 
-  - GUID: fd4070c6-d2da-421b-a557-3374a33c014e
+  - GUID: ad382ea6-178e-4d7d-aa83-352c97343a3a
     owner: {fileID: 11400000}
-    inputNodeGUID: e95c0270-3644-4f37-8de6-027b97091464
-    outputNodeGUID: b7c1b3c2-5c62-4983-8812-a7237a7ee535
-    inputFieldName: Input
-    outputFieldName: Output
-    inputPortIdentifier: 
-    outputPortIdentifier: 
-  - GUID: a69ef0db-17c4-488d-82b1-0aaef0269932
-    owner: {fileID: 11400000}
-    inputNodeGUID: 6dfc32ca-6da4-468e-9b25-26c2f57319f6
+    inputNodeGUID: b7c1b3c2-5c62-4983-8812-a7237a7ee535
     outputNodeGUID: e2df8b1f-70f2-4cf8-af4f-f773e37db0db
     inputFieldName: Input
     outputFieldName: Output
     inputPortIdentifier: 
     outputPortIdentifier: 
-  - GUID: 15a2ed22-398d-4485-b6e8-ec5658e01814
+  - GUID: 05366c79-278e-4676-b8fc-ce500ca79203
     owner: {fileID: 11400000}
-    inputNodeGUID: b7c1b3c2-5c62-4983-8812-a7237a7ee535
+    inputNodeGUID: a7ebab9c-f960-4235-90bf-cbea03576ef3
+    outputNodeGUID: 1a56b1f6-4431-4072-98d8-e0e5ad14818d
+    inputFieldName: Input
+    outputFieldName: Output
+    inputPortIdentifier: 
+    outputPortIdentifier: 
+  - GUID: 44209a0f-8c19-4dcf-bc65-d2058e051d20
+    owner: {fileID: 11400000}
+    inputNodeGUID: 8e3592d5-f7ae-4f70-8dc4-43ec526c03c8
+    outputNodeGUID: a7ebab9c-f960-4235-90bf-cbea03576ef3
+    inputFieldName: Input
+    outputFieldName: Output
+    inputPortIdentifier: 
+    outputPortIdentifier: 
+  - GUID: cbb9036c-efbc-48f4-871e-2d67fd4557f1
+    owner: {fileID: 11400000}
+    inputNodeGUID: 6dfc32ca-6da4-468e-9b25-26c2f57319f6
+    outputNodeGUID: b7c1b3c2-5c62-4983-8812-a7237a7ee535
+    inputFieldName: Input
+    outputFieldName: Output
+    inputPortIdentifier: 
+    outputPortIdentifier: 
+  - GUID: f2bdbcc1-00b8-4f90-aed9-e58974f3ee5f
+    owner: {fileID: 11400000}
+    inputNodeGUID: e95c0270-3644-4f37-8de6-027b97091464
     outputNodeGUID: 6dfc32ca-6da4-468e-9b25-26c2f57319f6
     inputFieldName: Input
     outputFieldName: Output
@@ -131,8 +140,8 @@ MonoBehaviour:
   serializedParameterList: []
   stickyNotes: []
   nodeInspectorReference: {fileID: 0}
-  position: {x: 535, y: -338, z: 0}
-  scale: {x: 1.15, y: 1.15, z: 1}
+  position: {x: 657, y: -581, z: 0}
+  scale: {x: 1.3225, y: 1.3225, z: 1}
   references:
     version: 2
     RefIds:
@@ -144,8 +153,8 @@ MonoBehaviour:
         computeOrder: 4
         position:
           serializedVersion: 2
-          x: -188.00005
-          y: 685
+          x: -188.00006
+          y: 566.00006
           width: 122
           height: 75
         expanded: 1
@@ -158,18 +167,36 @@ MonoBehaviour:
       data:
         nodeCustomName: 
         GUID: 6dfc32ca-6da4-468e-9b25-26c2f57319f6
-        computeOrder: 3
+        computeOrder: 5
         position:
           serializedVersion: 2
-          x: -183.99998
-          y: 553.5
+          x: -187.99997
+          y: 685
           width: 102
           height: 75
+        expanded: 1
+        debug: 0
+        nodeLock: 0
+        Input: 0
+        Output: 0
+    - rid: 7265160642589622272
+      type: {class: Repeat, ns: UnityBehaviorTree.Core.Decorator, asm: Assembly-CSharp}
+      data:
+        nodeCustomName: 
+        GUID: a7ebab9c-f960-4235-90bf-cbea03576ef3
+        computeOrder: 1
+        position:
+          serializedVersion: 2
+          x: 305.99997
+          y: 60.420002
+          width: 151
+          height: 94
         expanded: 0
         debug: 0
         nodeLock: 0
         Input: 0
         Output: 0
+        _numCycles: 3
     - rid: 7558387796063027200
       type: {class: RootNode, ns: UnityBehaviorTree.Core, asm: Assembly-CSharp}
       data:
@@ -178,8 +205,8 @@ MonoBehaviour:
         computeOrder: 0
         position:
           serializedVersion: 2
-          x: 309.00003
-          y: 123.9675
+          x: 337.00003
+          y: -73.64952
           width: 99
           height: 75
         expanded: 0
@@ -191,7 +218,7 @@ MonoBehaviour:
       data:
         nodeCustomName: 
         GUID: 8e3592d5-f7ae-4f70-8dc4-43ec526c03c8
-        computeOrder: 1
+        computeOrder: 2
         position:
           serializedVersion: 2
           x: 306.09753
@@ -208,11 +235,11 @@ MonoBehaviour:
       data:
         nodeCustomName: 
         GUID: e95c0270-3644-4f37-8de6-027b97091464
-        computeOrder: 5
+        computeOrder: 6
         position:
           serializedVersion: 2
-          x: -236.39131
-          y: 809.0957
+          x: -221.45251
+          y: 812.9
           width: 170
           height: 94
         expanded: 1
@@ -225,7 +252,7 @@ MonoBehaviour:
       data:
         nodeCustomName: 
         GUID: 6eadc36f-bf86-49fd-94f7-7b59085d6b99
-        computeOrder: 6
+        computeOrder: 7
         position:
           serializedVersion: 2
           x: -452.0001
@@ -242,7 +269,7 @@ MonoBehaviour:
       data:
         nodeCustomName: 
         GUID: bb201e61-bcc6-4325-9c74-f71ad494c730
-        computeOrder: 7
+        computeOrder: 8
         position:
           serializedVersion: 2
           x: -21.972443
@@ -259,7 +286,7 @@ MonoBehaviour:
       data:
         nodeCustomName: 
         GUID: a5e7e312-ab6c-451e-9d6a-5fbe49479470
-        computeOrder: 8
+        computeOrder: 9
         position:
           serializedVersion: 2
           x: 166.02753
@@ -276,7 +303,7 @@ MonoBehaviour:
       data:
         nodeCustomName: 
         GUID: e2df8b1f-70f2-4cf8-af4f-f773e37db0db
-        computeOrder: 2
+        computeOrder: 3
         position:
           serializedVersion: 2
           x: 45.000008
@@ -293,7 +320,7 @@ MonoBehaviour:
       data:
         nodeCustomName: 
         GUID: 1b911786-7f91-4132-a75b-e306a1188326
-        computeOrder: 9
+        computeOrder: 10
         position:
           serializedVersion: 2
           x: 625.7101
@@ -310,7 +337,7 @@ MonoBehaviour:
       data:
         nodeCustomName: 
         GUID: fcb11b57-bc84-486d-985c-68469709f189
-        computeOrder: 10
+        computeOrder: 11
         position:
           serializedVersion: 2
           x: 695.9325
@@ -327,7 +354,7 @@ MonoBehaviour:
       data:
         nodeCustomName: 
         GUID: 577d8fb9-850b-4818-8f1a-bd2c58c00e5d
-        computeOrder: 11
+        computeOrder: 12
         position:
           serializedVersion: 2
           x: 937
@@ -344,7 +371,7 @@ MonoBehaviour:
       data:
         nodeCustomName: 
         GUID: 59c48fe4-2753-4e15-9278-b0e5436c9966
-        computeOrder: 12
+        computeOrder: 13
         position:
           serializedVersion: 2
           x: 326.50006
